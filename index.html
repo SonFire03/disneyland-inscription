@@ -5,24 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Disneyland Paris - Inscription Confirmée</title>
   <link rel="stylesheet" href="style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js">
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
 </head>
 <body>
   <div class="container">
     <h1>🎉 Inscription confirmée ! 🎉</h1>
     <p>Félicitations Sofiane !</p>
     <p>Tu es officiellement inscrit à une aventure magique à <strong>Disneyland Paris</strong> 🏰</p>
+
     <div class="ticket">
-      🎟️ <span>Billet n° DLP-2025-06-18</span>
-<div class="qrcode-container">
-  <canvas id="qrcode"></canvas>
-  <p>Scanne ce code pour retrouver ton billet</p>
-</div>
+      🎟️ <span>Billet n° DLP-2025-06-18</span><br>
+      <p>Scanne ce code pour retrouver ton billet</p>
+      <canvas id="qrcode"></canvas>
     </div>
+
     <button onclick="celebrate()">Lancer la magie ✨</button>
   </div>
+
   <canvas id="confetti-canvas"></canvas>
   <script src="script.js"></script>
+
+  <script>
+    window.onload = function () {
+      // Génération du QR code
+      new QRious({
+        element: document.getElementById('qrcode'),
+        value: 'https://sonfire03.github.io/disneyland-inscription/',
+        size: 150,
+        background: 'white',
+        foreground: '#d8006f'
+      });
+    };
+  </script>
 </body>
 </html>
