@@ -5,7 +5,6 @@ function celebrate() {
   canvas.height = window.innerHeight;
 
   const confetti = [];
-
   for (let i = 0; i < 200; i++) {
     confetti.push({
       x: Math.random() * canvas.width,
@@ -30,16 +29,6 @@ function celebrate() {
     update();
   }
 
-window.onload = function () {
-  new QRious({
-    element: document.getElementById('qrcode'),
-    value: 'https://sonfire03.github.io/disneyland-inscription/',
-    size: 150,
-    background: 'white',
-    foreground: '#d8006f',
-  });
-};
-
   function update() {
     confetti.forEach(c => {
       c.y += Math.cos(c.d) + 1 + c.r / 2;
@@ -53,3 +42,14 @@ window.onload = function () {
 
   setInterval(draw, 20);
 }
+
+// Génération du QR code
+window.onload = function () {
+  new QRious({
+    element: document.getElementById('qrcode'),
+    value: 'https://sonfire03.github.io/disneyland-inscription/',
+    size: 150,
+    background: 'white',
+    foreground: '#d8006f'
+  });
+};

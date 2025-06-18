@@ -13,32 +13,18 @@
     <p>Félicitations Sofiane !</p>
     <p>Tu es officiellement inscrit à une aventure magique à <strong>Disneyland Paris</strong> 🏰</p>
 
-<div class="ticket">
-  🎟️ <span>Billet n° DLP-2025-06-18</span>
-
-  <div class="qrcode-container">
-    <canvas id="qrcode"></canvas>
-    <p>Scanne ce code pour retrouver ton billet</p>
-  </div>
-</div>
+    <div class="ticket">
+      🎟️ <span>Billet n° DLP-2025-06-18</span>
+      <div class="qrcode-container">
+        <canvas id="qrcode"></canvas>
+        <p>Scanne ce code pour retrouver ton billet</p>
+      </div>
+    </div>
 
     <button onclick="celebrate()">Lancer la magie ✨</button>
   </div>
 
   <canvas id="confetti-canvas"></canvas>
   <script src="script.js"></script>
-
-  <script>
-    window.onload = function () {
-      // Génération du QR code
-      new QRious({
-        element: document.getElementById('qrcode'),
-        value: 'https://sonfire03.github.io/disneyland-inscription/',
-        size: 150,
-        background: 'white',
-        foreground: '#d8006f'
-      });
-    };
-  </script>
 </body>
 </html>
