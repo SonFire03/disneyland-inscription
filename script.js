@@ -30,6 +30,16 @@ function celebrate() {
     update();
   }
 
+window.onload = function () {
+  new QRious({
+    element: document.getElementById('qrcode'),
+    value: 'https://sonfire03.github.io/disneyland-inscription/',
+    size: 150,
+    background: 'white',
+    foreground: '#d8006f',
+  });
+};
+
   function update() {
     confetti.forEach(c => {
       c.y += Math.cos(c.d) + 1 + c.r / 2;
